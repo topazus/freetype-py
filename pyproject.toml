@@ -1,3 +1,30 @@
 [build-system]
-requires = ["setuptools>=42", "wheel", "setuptools_scm[toml]>=3.4", "certifi", "cmake"]
+requires = ["setuptools>=42", "wheel", "setuptools_scm[toml]>=3.4", "certifi"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "freetype-py"
+version = "2.4.0"
+description = 'Freetype python bindings'
+readme = "README.rst"
+classifiers=[
+    'Development Status :: 5 - Production/Stable',
+    'Environment :: X11 Applications',
+    'Environment :: MacOS X',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: BSD License',
+    'Operating System :: MacOS',
+    'Operating System :: Microsoft :: Windows',
+    'Operating System :: POSIX',
+    'Operating System :: Unix',
+    'Programming Language :: Python :: 3',
+    'Topic :: Multimedia :: Graphics',
+]
+requires-python = ">=3.7"
+license = {file = "LICENSE.txt"}
+keywords = ['freetype', 'font']
+authors = 'Nicolas P. Rougier'
+optional-dependencies.test = [
+    "tox-current-env",
+    "pytest",
+]
